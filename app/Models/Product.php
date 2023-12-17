@@ -19,7 +19,7 @@ class Product extends Model
     // return $this->hasMany(Sale::class);
     // }
 
-    public function brand()
+    public function sale()
     {
     return $this->belongTo(Sale::class);
     }

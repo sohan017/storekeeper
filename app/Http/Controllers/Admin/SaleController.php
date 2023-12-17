@@ -12,12 +12,20 @@ class SaleController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
-    {
-        $sales = Sale::with('product')->orderBy('created_at', 'desc')->get();
+    // public function index()
+    // {
+    //     $sales = Sale::with('product')->orderBy('created_at', 'desc')->get();
 
-        return view('sales.index', compact('sales'));
-    }
+    //     return view('sales.index', compact('sales'));
+    // }
+
+    public function index()
+{
+    $sales = Sale::with('product')->orderBy('created_at', 'desc')->get();
+
+    //return view('sale.index', compact('sales'));
+    return view('admin/sale/index', compact('sales'));
+}
 
 
 
